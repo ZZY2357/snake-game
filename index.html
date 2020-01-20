@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Snake</title>
-    <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    #game{
-        border: 3px solid #000;
-    }
-    </style>
-    <script src="game.js"></script>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="game" width="730" height="530"></canvas>
+
+    <div class="wrap">
+        <div class="text">
+        <h1>Snake Game</h1>
+        <a href="https://github.com/ZZY2357/snake-game">Github</a>
+        <p>Click anywhere to play.</p>
+    </div>
+    </div>
+
+    <script>
+    window.onclick = function () {
+        window.location = './game';
+    }
+    </script>
 </body>
 </html>

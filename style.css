@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    height: 100vh;
+    background-image: repeating-linear-gradient(135deg, blue 0, blue 20px, red 20px, red 40px);
+    text-align: center;
+}
+
+.text {
+    color: #fff;
+    line-height: 25vh;
+}
