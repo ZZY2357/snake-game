@@ -56,7 +56,7 @@ function Snake() {
                 this.body.unshift(new SnakeBlock(this.head.row - 1, this.head.col));
                 break;
             case 'down':
-                if (this.head.y >= 530 - blockSize) {
+                if (this.head.y >= canvas.height - blockSize) {
                     gameOver();
                 }
                 this.body.unshift(new SnakeBlock(this.head.row + 1, this.head.col));
@@ -68,7 +68,7 @@ function Snake() {
                 this.body.unshift(new SnakeBlock(this.head.row, this.head.col - 1));
                 break;
             case 'right':
-                if (this.head.x >= 730 - blockSize) {
+                if (this.head.x >= canvas.width - blockSize) {
                     gameOver();
                 }
                 this.body.unshift(new SnakeBlock(this.head.row, this.head.col + 1));
