@@ -73,7 +73,7 @@ function Snake() {
                 }
                 this.body.unshift(new SnakeBlock(this.head.row, this.head.col + 1));
                 break;
-                
+
             default:
                 break;
         }
@@ -89,23 +89,24 @@ function Snake() {
         }
         if (this.head.x == nowApple.x && this.head.y == nowApple.y) {
             nowApple.randomPos();
-            
-            switch (this.headth) {
-                case 'up':
-                    this.body.push(new SnakeBlock(this.end.row + 1, this.end.col));
-                    break;
-                case 'down':
-                    this.body.push(new SnakeBlock(this.end.row - 1, this.end.col));
-                    break;
-                case 'left':
-                    this.body.push(new SnakeBlock(this.end.row, this.end.col - 1));
-                    break;
-                case 'right':
-                    this.body.push(new SnakeBlock(this.end.row, this.end.col + 1));
-                break;
-            
-                default:
-                    break;
+            for (let i = 0; i < 10; i++) {
+                switch (this.headth) {
+                    case 'up':
+                        this.body.push(new SnakeBlock(this.end.row + 1, this.end.col));
+                        break;
+                    case 'down':
+                        this.body.push(new SnakeBlock(this.end.row - 1, this.end.col));
+                        break;
+                    case 'left':
+                        this.body.push(new SnakeBlock(this.end.row, this.end.col - 1));
+                        break;
+                    case 'right':
+                        this.body.push(new SnakeBlock(this.end.row, this.end.col + 1));
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
         for (let i = 1; i < snake.body.length; i++) {
